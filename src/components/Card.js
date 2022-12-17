@@ -14,6 +14,8 @@ const Card = () => {
             </div>
             <div className="px-6 py-4">
                 <span className='inline-block rounded-full bg-gray-200 px-3 py-1 mr-2 text-sm text-gray-700 font-semibold'>#tag1</span>
+                <span className='inline-block rounded-full bg-gray-200 px-3 py-1 mr-2 text-sm text-gray-700 font-semibold'>#tag2</span>
+                <span className='inline-block rounded-full bg-gray-200 px-3 py-1 mr-2 text-sm text-gray-700 font-semibold'>#tag3</span>
             </div>
         </div>
     );
