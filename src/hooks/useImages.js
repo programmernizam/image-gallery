@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useImages = () => {
     const [images, setImages] = useState([])
@@ -7,15 +7,14 @@ const useImages = () => {
     useEffect(() => {
         fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${terms}&image_type=photo&pretty=true`)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                setImages(data.hits)
+                setIsLoading(data.false)
+            })
             .catch(err => console.log(err))
     }, [terms])
 
-    return (
-        <div>
-
-        </div>
-    );
+    return [images, setImages, isLoading, setIsLoading, terms, setTerms]
 };
 
 export default useImages;
