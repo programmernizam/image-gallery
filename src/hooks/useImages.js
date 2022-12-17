@@ -9,12 +9,12 @@ const useImages = () => {
             .then(res => res.json())
             .then(data => {
                 setImages(data.hits)
-                setIsLoading(data.false)
+                setIsLoading(false)
             })
             .catch(err => console.log(err))
     }, [terms])
 
-    return [images, setImages, isLoading, setIsLoading, terms, setTerms]
+    return [images, setImages, isLoading, terms, setTerms]
 };
 
 export default useImages;
