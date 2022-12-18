@@ -3,6 +3,7 @@ import React from 'react';
 const Card = ({ image }) => {
     const { previewURL, user, views, tags, likes, downloads } = image
     const tag = tags.split(",")
+
     return (
         <div className='max-w-sm rounded overflow-hidden shadow-lg'>
             <img src={previewURL} alt={user} className='w-full' />
